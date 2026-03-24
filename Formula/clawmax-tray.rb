@@ -1,7 +1,7 @@
 class ClawmaxTray < Formula
   desc "macOS menu bar agent for ClawMax"
   homepage "https://clawmax.ai"
-  version "0.1.12"
+  version "0.1.13"
   license "Proprietary"
 
   depends_on :macos
@@ -9,8 +9,8 @@ class ClawmaxTray < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v0.1.12/clawmax-tray-v0.1.12-darwin-arm64.tar.gz"
-      sha256 "d342499fe5de22f85df239618991ca97e9d5a4a253173ab8c533aea86f1e0c8a"
+      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v0.1.13/clawmax-tray-v0.1.13-darwin-arm64.tar.gz"
+      sha256 "03c9daf275d22faa0d0a0ff00d3b25cbb1ff504994801bb994d390e777e53566"
     end
   end
 
