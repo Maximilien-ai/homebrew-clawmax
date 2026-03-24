@@ -1,26 +1,26 @@
 class Clawmax < Formula
   desc "CLI for managing ClawMax on-premise deployments"
   homepage "https://clawmax.ai"
-  version "0.1.10"
+  version "0.1.11"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v0.1.10/clawmax-v0.1.10-darwin-arm64.tar.gz"
-      sha256 "2f8bf97aadbe46bbd81ef34c9cce63da35a32dcef527c0ee0ae32570948fa05e"
+      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v0.1.11/clawmax-v0.1.11-darwin-arm64.tar.gz"
+      sha256 "fc53d86f27e4c5f79047f08cef9599ad47ff03bfc5cc551ec688c731804358ce"
     else
-      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v0.1.10/clawmax-v0.1.10-darwin-amd64.tar.gz"
-      sha256 "9097c6faaa1032b5cf4e500afd9f21c9cab0ba5cf4d14f3d2bee9d3d5d9f747a"
+      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v0.1.11/clawmax-v0.1.11-darwin-amd64.tar.gz"
+      sha256 "993ed227c14b5b531d51b89d84d4416ec9a20e1a78dfeb5342ca19a509913af8"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v0.1.10/clawmax-v0.1.10-linux-arm64.tar.gz"
-      sha256 "6e2de894e7ce0c70f6971b26d2ceec68aca36c144356ef1918283892a4c8dd63"
+      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v0.1.11/clawmax-v0.1.11-linux-arm64.tar.gz"
+      sha256 "f75d33517968bf90a43b9cb292ba4180e163d4f1ede432fb8b08c7a87a629c2e"
     else
-      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v0.1.10/clawmax-v0.1.10-linux-amd64.tar.gz"
-      sha256 "1e3c924560c65c4a7b2082cc6f608ebcc314d59a0ab63496ab68260a8827b09f"
+      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v0.1.11/clawmax-v0.1.11-linux-amd64.tar.gz"
+      sha256 "d1c77775b295e1310d819997d7d7e5130a85887b3f5bfe450c428a72d405f443"
     end
   end
 
