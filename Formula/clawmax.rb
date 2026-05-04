@@ -1,26 +1,26 @@
 class Clawmax < Formula
   desc "CLI for managing ClawMax on-premise deployments"
   homepage "https://clawmax.ai"
-  version "1.5.23"
+  version "1.5.24"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.5.23/clawmax-v1.5.23-darwin-arm64.tar.gz"
-      sha256 "2e9fff70405310a100aa8e54b2226a220b16edd2211306d22bbe3e7fd8bd8862"
+      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.5.24/clawmax-v1.5.24-darwin-arm64.tar.gz"
+      sha256 "c3b7ead7a236e7cf5daf91d40cde82466f3abe829af11508313a1aeaacefe552"
     else
-      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.5.23/clawmax-v1.5.23-darwin-amd64.tar.gz"
-      sha256 "a342076bf1f0e98095576c3c466cb88c8ba23ea8efb2fde8c195ab5238c65bdf"
+      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.5.24/clawmax-v1.5.24-darwin-amd64.tar.gz"
+      sha256 "556483c345c3591d5871f20678b04364f31275f986ec72e4136562ccf729476e"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.5.23/clawmax-v1.5.23-linux-arm64.tar.gz"
-      sha256 "63878b94c22e3baefe8ecd1800b3b89fc941393efcd0d2550a1b4dc9fa258737"
+      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.5.24/clawmax-v1.5.24-linux-arm64.tar.gz"
+      sha256 "1e33e05475c500df9f51e4759fd3be4a17410f0a9a0d71e66175fc00951caeb4"
     else
-      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.5.23/clawmax-v1.5.23-linux-amd64.tar.gz"
-      sha256 "45868896ac6f8b4c6bf1ca1a4c266d9eb8652bdaf91718a4886d3c958b6127ca"
+      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.5.24/clawmax-v1.5.24-linux-amd64.tar.gz"
+      sha256 "13b40e7f03a49ef8430f288057ce3aee6b1149544124556fd59d75cd1f2b860e"
     end
   end
 
@@ -32,6 +32,6 @@ class Clawmax < Formula
   end
 
   test do
-    assert_match "1.5.23", shell_output("#{bin}/clawmax version")
+    assert_match "1.5.24", shell_output("#{bin}/clawmax version")
   end
 end
