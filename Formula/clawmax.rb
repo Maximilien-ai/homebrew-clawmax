@@ -7,20 +7,20 @@ class Clawmax < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.8.0/clawmax-v1.8.0-darwin-arm64.tar.gz"
-      sha256 "bd7905498413b72e1ba6984034b9fde4a8c43d9d39619b8735d375ca305e20d9"
+      sha256 "14b139cdaf0f972970cac8f92f9c86a2d1b124a827e14294c852a830f937d1ae"
     else
       url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.8.0/clawmax-v1.8.0-darwin-amd64.tar.gz"
-      sha256 "0617fce078155bd4d902db5389b684062c77db969cbf90233d769aa60423c4c2"
+      sha256 "8f33aa348a68495360920a832212b75871a48c401e2893c31aa742f1007db67c"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.8.0/clawmax-v1.8.0-linux-arm64.tar.gz"
-      sha256 "067dd0bc5dd63a990332d0457163d57b1f1be3a5e47724e9da73f151b7fa92ae"
+      sha256 "f64c5d120cceec1b088df1415b043e16dbda331e1bef19e46fb87297e26b630c"
     else
       url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.8.0/clawmax-v1.8.0-linux-amd64.tar.gz"
-      sha256 "a39591d531053079dbf9a1fb54c12f3a23dc18ec7d7b85ccdb7bb372901ec366"
+      sha256 "e097fcf4f77987646a7be173f5970203761e5352705871dd4f2478158d9cfe48"
     end
   end
 
