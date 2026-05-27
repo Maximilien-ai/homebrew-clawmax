@@ -1,26 +1,26 @@
 class Clawmax < Formula
   desc "CLI for managing ClawMax on-premise deployments"
   homepage "https://clawmax.ai"
-  version "1.8.0"
+  version "1.8.1"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.8.0/clawmax-v1.8.0-darwin-arm64.tar.gz"
-      sha256 "de543d2df64798d29d395b1c0e28d7054affd75601f7f06bc1c948f793adce13"
+      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.8.1/clawmax-v1.8.1-darwin-arm64.tar.gz"
+      sha256 "741cc2cdbb9029e3579418cd6ce5113d9ae1d2587dbb1b74356b42abcd046d0f"
     else
-      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.8.0/clawmax-v1.8.0-darwin-amd64.tar.gz"
-      sha256 "6e5e7abee4d820ca6f979b54a54b47e22eac16df0a0d3abc9d20b5ba049532a4"
+      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.8.1/clawmax-v1.8.1-darwin-amd64.tar.gz"
+      sha256 "27f2874b3b0dff2e79b278a4ddd684c4cd037eca035a6b40876c85ab42c9874a"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.8.0/clawmax-v1.8.0-linux-arm64.tar.gz"
-      sha256 "0327862d0c531c74e29f09a53e1603a2f9d2d007fea95535c230bf0cfe15aac1"
+      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.8.1/clawmax-v1.8.1-linux-arm64.tar.gz"
+      sha256 "690d14025bb4da683ad4ba0bf0eda969e760bb61cac08d8f83e4835c6e615a4e"
     else
-      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.8.0/clawmax-v1.8.0-linux-amd64.tar.gz"
-      sha256 "1f80322aeed0ec4f26d73e3e1f09e55a2e40bb8698dcf94546fef47691e12df6"
+      url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.8.1/clawmax-v1.8.1-linux-amd64.tar.gz"
+      sha256 "4704d97d4c9929fcdb14cd24a1489d855990b4f293800cb5d5ec939695970bf1"
     end
   end
 
@@ -29,12 +29,9 @@ class Clawmax < Formula
     raise "clawmax binary not found in release archive" if binary.nil?
 
     bin.install binary => "clawmax"
-
-    tray = Dir["**/clawmax-tray"].find { |path| File.file?(path) && File.executable?(path) }
-    bin.install tray => "clawmax-tray" unless tray.nil?
   end
 
   test do
-    assert_match "1.8.0", shell_output("#{bin}/clawmax version")
+    assert_match "1.8.1", shell_output("#{bin}/clawmax version")
   end
 end
