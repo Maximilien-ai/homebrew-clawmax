@@ -7,20 +7,20 @@ class Clawmax < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.9.17/clawmax-v1.9.17-darwin-arm64.tar.gz"
-      sha256 "44d453be3e0f7c5ab541788d81c6e0fa6790dda3cb6341e0e02a7721b054c365"
+      sha256 "6fdda26e0e48439f7d3698f9723b7253ec39e464f27b69f2309e6457c0dfd8d8"
     else
       url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.9.17/clawmax-v1.9.17-darwin-amd64.tar.gz"
-      sha256 "154a9a911daa3f00d336849151bb533169af1d7b8a12afa2d4890dca9ad2d237"
+      sha256 "e8a1687a0aae564c764ee21aab1c6e8f1e233d939ff039b4cafe061b35fae300"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.9.17/clawmax-v1.9.17-linux-arm64.tar.gz"
-      sha256 "58d7233d853f2f2d85b5898f42e3595b1ada3ad213f60fabe5ad966e00d68711"
+      sha256 "334c108c2b350a6ccbee68b08df2a94efe7df372cbbddc702cf826d9d7bca62f"
     else
       url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.9.17/clawmax-v1.9.17-linux-amd64.tar.gz"
-      sha256 "879b7bbc05e64a44132bb607e5c7c6e6ec93a31f2c9119dec80b904af9f2460d"
+      sha256 "f1126384efb1db2d566284133033e472e431a72022051d572aa05a65f9dbc821"
     end
   end
 
@@ -29,6 +29,9 @@ class Clawmax < Formula
     raise "clawmax binary not found in release archive" if binary.nil?
 
     bin.install binary => "clawmax"
+
+    tray = Dir["**/clawmax-tray"].find { |path| File.file?(path) && File.executable?(path) }
+    bin.install tray => "clawmax-tray" unless tray.nil?
   end
 
   test do
