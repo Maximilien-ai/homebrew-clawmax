@@ -1,13 +1,13 @@
 cask "clawmax-app" do
-  version "1.9.28"
-  sha256 "f8273ec4d8d87e93786bc994b11df4050a9800535c4d077ec81539689a0b3c9d"
+  version "1.9.29"
+  sha256 "875e5a4f6f1478e4aa573f0429aab3f6d81caeda9cee5f0c3d0084f5b6b9cf48"
 
-  url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.9.28/ClawMax-1.9.28.pkg"
+  url "https://github.com/Maximilien-ai/clawmax-cli-releases/releases/download/v1.9.29/ClawMax-1.9.29.pkg"
   name "ClawMax"
   desc "ClawMax Agent and App for on-premise deployments"
   homepage "https://clawmax.ai"
 
-  pkg "ClawMax-1.9.28.pkg"
+  pkg "ClawMax-1.9.29.pkg"
 
   uninstall pkgutil: "ai.maximilien.clawmax"
 end
